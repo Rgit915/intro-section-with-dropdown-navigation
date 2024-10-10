@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 768px) {
+  .nav-link ul {
+    position: relative;
+    display: block;
+  }
+
+  .nav-link li {
+    margin: 0;
+    padding: 0;
+  }
+}
