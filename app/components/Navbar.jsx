@@ -6,6 +6,13 @@ import NavLinks from "./NavLinks";
 const Navbar = ({ toggleMenu, closeMenu }) => {
   return (
     <>
+      {/* Overlay (appears when toggleMenu is true) */}
+      {toggleMenu && (
+        <div
+          className="fixed top-0 left-0 h-full w-1/3 bg-almost-black bg-opacity-75 z-40"
+          onClick={closeMenu}
+        ></div>
+      )}
       {/* Mobile Navbar (shown when toggleMenu is true) */}
       <div
         className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg  transform ${
