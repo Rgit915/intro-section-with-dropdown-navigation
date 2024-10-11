@@ -9,15 +9,15 @@ const Navbar = ({ toggleMenu, closeMenu }) => {
       {/* Overlay (appears when toggleMenu is true) */}
       {toggleMenu && (
         <div
-          className="fixed top-0 left-0 h-full w-1/3 bg-almost-black bg-opacity-75 z-40"
+          className="fixed top-0 left-0 h-full w-1/3 md:w-2/4 bg-almost-black bg-opacity-75 z-40"
           onClick={closeMenu}
         ></div>
       )}
       {/* Mobile Navbar (shown when toggleMenu is true) */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg  transform ${
+        className={`fixed top-0 right-0 h-full w-2/3 md:w-2/4 bg-white shadow-lg transform ${
           toggleMenu ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out md:hidden`}
+        } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div className="p-4 flex justify-end">
           {/* Close Menu Icon */}
